@@ -1,0 +1,15 @@
+{
+  "common": {
+    "command": {
+      "search": "Search"
+    },
+    "label": {
+      "stockvest": "Stockvest",
+      "trending": "Trending",
+      "topGainer": "Top Gainer",
+      "topLoser": "Top Loser",
+      "mostActive": "Most Active"
+    }
+  },
+  "home": {}
+}
