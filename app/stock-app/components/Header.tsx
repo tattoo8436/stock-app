@@ -8,12 +8,12 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="home__header">
-      <div className="home__header__icon">
+    <div className="stock-app-header">
+      <div className="stock-app-header__icon">
         <MdCandlestickChart />
       </div>
 
-      <div className="home__header__text">{t("common.label.stockvest")}</div>
+      <div className="stock-app-header__text">{t("common.label.stockvest")}</div>
     </div>
   );
 };

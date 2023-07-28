@@ -1,0 +1,25 @@
+.stock-app-footer {
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.05);
+
+  &__item{
+    border-radius: 10px;
+    height: 28px;
+    width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active{
+    background-color: $text-color;
+
+    svg{
+        color: $primary;
+    }
+  }
+
+}

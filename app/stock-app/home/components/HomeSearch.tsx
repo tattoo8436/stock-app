@@ -2,21 +2,24 @@
 
 import { Input } from "antd";
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { FiSearch } from "react-icons/fi";
 
-const ContentSearch = () => {
-  const { t } = useTranslation();
+interface IProps {
+  t: any;
+}
+
+const HomeSearch = (props: IProps) => {
+  const { t } = props;
 
   return (
-    <div className="home__content__search">
+    <div className="home-search">
       <Input
         prefix={<FiSearch />}
         placeholder={t("common.command.search")}
-        className="search__input"
+        className="home-search__input"
       />
     </div>
   );
 };
 
-export default ContentSearch;
+export default HomeSearch;

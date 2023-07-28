@@ -1,0 +1,21 @@
+.home-search {
+  margin-bottom: 20px;
+
+  &__input {
+    background-color: #f9f9f9;
+    height: 44px;
+    padding-left: 16px;
+    border-radius: 12px;
+    border: none;
+
+    .ant-input {
+      background-color: #f9f9f9;
+    }
+
+    .ant-input-prefix {
+      font-size: 16px;
+      opacity: 0.3;
+      margin-right: 16px;
+    }
+  }
+}

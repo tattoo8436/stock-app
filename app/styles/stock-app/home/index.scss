@@ -1,0 +1,9 @@
+.home {
+  @import "./components/home-search";
+  @import "./components/home-chart";
+  @import "./components/home-company";
+
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}

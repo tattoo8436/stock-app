@@ -3,41 +3,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Button } from "antd";
-import { getDataCompany } from "@api/home/homeApi";
+import { getDataCompany } from "@/app/api/stock-app/home/homeApi";
 import Image from "next/image";
 import classNames from "classnames";
 
 interface IProps {
   t: any;
+  listCompanies: IHomeCompany[];
+  search: IHomeSearch;
+  setSearch: React.Dispatch<React.SetStateAction<IHomeSearch>>;
 }
 
-interface ICompany {
-  id: number;
-  logo: any;
-  name: string;
-  description: string;
-  value1: number;
-  value2: number;
-  percent: number;
-}
-const ContentCompany = (props: IProps) => {
-  const { t } = props;
-
-  const [listCompanies, setListCompanies] = useState<ICompany[]>([]);
-
-  useEffect(() => {
-    fetchCompany();
-  }, []);
-
-  const fetchCompany = async () => {
-    try {
-      const data = await getDataCompany();
-      console.log(data);
-      setListCompanies(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+const HomeCompany = (props: IProps) => {
+  const { t, listCompanies, search, setSearch } = props;
 
   const formatValue2 = (value2: number, percent: number) => {
     if (value2 > 0) {
@@ -46,30 +24,54 @@ const ContentCompany = (props: IProps) => {
     return `-${value2} (-${percent}%)`;
   };
 
+  const handleChangeSearch = (type: string) => {
+    setSearch((pre) => ({ ...pre, type: type }));
+  };
+
   return (
-    <div className="content-company">
-      <div className="content-company__header">
-        <div className="content-company__header__item">
+    <div className="home-company">
+      <div className="home-company__header">
+        <div
+          className={classNames("home-company__header__item", {
+            active: search.type === "TRENDING",
+          })}
+          onClick={() => handleChangeSearch("TRENDING")}
+        >
           {t("common.label.trending")}
         </div>
 
-        <div className="content-company__header__item">
+        <div
+          className={classNames("home-company__header__item", {
+            active: search.type === "TOP_GAINER",
+          })}
+          onClick={() => handleChangeSearch("TOP_GAINER")}
+        >
           {t("common.label.topGainer")}
         </div>
 
-        <div className="content-company__header__item">
+        <div
+          className={classNames("home-company__header__item", {
+            active: search.type === "TOP_LOSER",
+          })}
+          onClick={() => handleChangeSearch("TOP_LOSER")}
+        >
           {t("common.label.topLoser")}
         </div>
 
-        <div className="content-company__header__item">
+        <div
+          className={classNames("home-company__header__item", {
+            active: search.type === "MOST_ACTIVE",
+          })}
+          onClick={() => handleChangeSearch("MOST_ACTIVE")}
+        >
           {t("common.label.mostActive")}
         </div>
       </div>
 
-      <div className="content-company__content">
-        {listCompanies?.map((i: ICompany) => {
+      <div className="home-company__content">
+        {listCompanies?.map((i) => {
           return (
-            <div key={i.id} className="content-company__content__item">
+            <div key={i.id} className="home-company__content__item">
               <div className="item__left">
                 <div className="item__left__logo">
                   <Image src={i.logo} alt="" />
@@ -102,4 +104,4 @@ const ContentCompany = (props: IProps) => {
   );
 };
 
-export default ContentCompany;
+export default HomeCompany;

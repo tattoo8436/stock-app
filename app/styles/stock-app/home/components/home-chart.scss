@@ -1,0 +1,36 @@
+.home-chart {
+  margin-bottom: 20px;
+  flex: 1;
+
+  &__header {
+    &__title {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: -0.34px;
+    }
+
+    &__content {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 44px; /* 122.222% */
+      letter-spacing: -0.792px;
+    }
+
+    &__footer {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+      letter-spacing: -0.176px;
+      color: $danger;
+    }
+  }
+
+  &__content {
+    height: 170px;
+    background-color: #ccc;
+  }
+}
