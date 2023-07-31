@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/plots": "^1.2.5",
     "@types/node": "20.4.5",
     "@types/react": "18.2.16",
     "@types/react-dom": "18.2.7",
     "antd": "^5.7.3",
+    "apexcharts": "^3.41.0",
     "autoprefixer": "10.4.14",
     "classnames": "^2.3.2",
     "eslint": "8.45.0",
@@ -22,6 +24,7 @@
     "normalize.css": "^8.0.1",
     "postcss": "8.4.27",
     "react": "18.2.0",
+    "react-apexcharts": "^1.4.1",
     "react-dom": "18.2.0",
     "react-i18next": "^13.0.2",
     "react-icons": "^4.10.1",

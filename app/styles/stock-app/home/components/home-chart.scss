@@ -31,6 +31,9 @@
 
   &__content {
     height: 170px;
-    background-color: #ccc;
   }
+}
+
+.apexcharts-xaxis, .apexcharts-yaxis, .apexcharts-toolbar{
+  //display: none;
 }

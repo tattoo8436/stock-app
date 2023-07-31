@@ -12,3 +12,8 @@ interface IHomeCompany {
     name: string;
     type: string;
   }
+
+  interface IHomeChart {
+    Date: string,
+    scales: number,
+  }
