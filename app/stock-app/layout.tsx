@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Stock App",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

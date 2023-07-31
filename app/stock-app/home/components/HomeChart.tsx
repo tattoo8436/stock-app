@@ -1,24 +1,28 @@
+import {
+  formatRealNumer,
+  formatValuePercent,
+  getColorValue,
+} from "@utils/index";
 import { ApexOptions } from "apexcharts";
+import classNames from "classnames";
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
-import ApexCharts from "react-apexcharts";
+//import ApexCharts from "react-apexcharts";
+const ApexCharts = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 interface IProps {
   t: any;
-  listCharts: IHomeChart[];
+  dataChart: number[][];
+  chartDetail: IHomeChartDetail | null;
 }
 
 const HomeChart = (props: IProps) => {
-  const { t, listCharts } = props;
+  const { t, dataChart, chartDetail } = props;
 
   const series: ApexAxisChartSeries = [
     {
       name: "Series 1",
-      data: [
-        [1609459200000, 31],
-        [1609545600000, 40],
-        [1609632000000, 28],
-        [1609718400000, 51],
-      ],
+      data: dataChart,
       color: "#E0144C",
     },
   ];
@@ -47,23 +51,104 @@ const HomeChart = (props: IProps) => {
     stroke: {
       curve: "smooth",
     },
+    grid: {
+      show: false,
+    },
   };
 
   return (
     <div className="home-chart">
       <div className="home-chart__header">
-        <div className="home-chart__header__title">IHSG</div>
-        <div className="home-chart__header__content">7.056,04</div>
-        <div className="home-chart__header__footer">-35,72 (-0,50%)</div>
+        <div className="home-chart__header__title">
+          {chartDetail?.name ?? ""}
+        </div>
+        <div className="home-chart__header__content">
+          {formatRealNumer(chartDetail?.value1)}
+        </div>
+        <div
+          className={`home-chart__header__footer ${getColorValue(
+            chartDetail?.value2
+          )}`}
+        >
+          {chartDetail
+            ? formatValuePercent(chartDetail?.value2, chartDetail?.percent)
+            : ""}
+        </div>
       </div>
 
-      <div className="home-chart__content">
+      <div className="home-chart__content" id="home-chart-content">
         <ApexCharts
           type="area"
           options={options}
           series={series}
           height={140}
         />
+      </div>
+
+      <div className="home-chart__footer">
+        <div className="home-chart__footer__left">
+          <div className="home-chart__footer__left__item">
+            <div className="home-chart__footer__left__item__label">
+              {t("fieldName.open")}
+            </div>
+
+            <div className="home-chart__footer__left__item__value negative">
+              {formatRealNumer(chartDetail?.open)}
+            </div>
+          </div>
+
+          <div className="home-chart__footer__left__item">
+            <div className="home-chart__footer__left__item__label">
+              {t("fieldName.high")}
+            </div>
+
+            <div className="home-chart__footer__left__item__value positive">
+              {formatRealNumer(chartDetail?.high)}
+            </div>
+          </div>
+
+          <div className="home-chart__footer__left__item">
+            <div className="home-chart__footer__left__item__label">
+              {t("fieldName.low")}
+            </div>
+
+            <div className="home-chart__footer__left__item__value negative">
+              {formatRealNumer(chartDetail?.low)}
+            </div>
+          </div>
+        </div>
+
+        <div className="home-chart__footer__right">
+          <div className="home-chart__footer__right__item">
+            <div className="home-chart__footer__right__item__label">
+              {t("fieldName.lot")}
+            </div>
+
+            <div className="home-chart__footer__right__item__value">
+              {`${formatRealNumer(chartDetail?.lot)} M`}
+            </div>
+          </div>
+
+          <div className="home-chart__footer__right__item">
+            <div className="home-chart__footer__right__item__label">
+              {t("fieldName.value")}
+            </div>
+
+            <div className="home-chart__footer__right__item__value">
+              {`${formatRealNumer(chartDetail?.value)} T`}
+            </div>
+          </div>
+
+          <div className="home-chart__footer__right__item">
+            <div className="home-chart__footer__right__item__label">
+              {t("fieldName.freq")}
+            </div>
+
+            <div className="home-chart__footer__right__item__value">
+              {`${formatRealNumer(chartDetail?.freq)} M`}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

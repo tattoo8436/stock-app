@@ -22,6 +22,7 @@
     "i18next": "^23.2.11",
     "next": "13.4.12",
     "normalize.css": "^8.0.1",
+    "numeral": "^2.0.6",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-apexcharts": "^1.4.1",
@@ -31,5 +32,8 @@
     "sass": "^1.64.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/numeral": "^2.0.2"
   }
 }

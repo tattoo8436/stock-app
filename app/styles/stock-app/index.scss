@@ -1,8 +1,18 @@
 .stock-app {
-  height: 100vh;
   display: flex;
+  height: 100vh;
   flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+
+  &:has(.stock-app-detail){
+    .stock-app-footer, .stock-app-header{
+      display: none;
+    }
+
+    .stock-app__content{
+      padding-top: 0;
+    }
+  }
 
   @import "./components/header";
   @import "./components/footer";

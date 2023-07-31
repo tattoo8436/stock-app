@@ -1,0 +1,17 @@
+.stock-app-detail {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @import "./components/header";
+  @import "./components/footer";
+
+  &-content {
+    flex: 1;
+
+    @import "./components/chart-header";
+    @import "./components/chart-detail";
+    @import "./components/chart-footer";
+  }
+}

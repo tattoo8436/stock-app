@@ -1,0 +1,25 @@
+.stock-app-detail-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+
+  &__left {
+    &__item {
+      font-size: 24px;
+    }
+  }
+
+  &__right {
+    &__item {
+      font-size: 24px;
+      margin-left: 20px;
+    }
+
+    .item-star{
+        fill: $primary;
+        color: $primary;
+    }
+  }
+}

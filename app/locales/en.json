@@ -1,7 +1,9 @@
 {
   "common": {
     "command": {
-      "search": "Search"
+      "search": "Search",
+      "sell": "Sell",
+      "buy": "Buy"
     },
     "label": {
       "stockvest": "Stockvest",
@@ -9,8 +11,21 @@
       "topGainer": "Top Gainer",
       "topLoser": "Top Loser",
       "mostActive": "Most Active",
-      "stockApp": "Stock App"
+      "stockApp": "Stock App",
+      "analisis": "Analisis",
+      "news": "News",
+      "orderBook": "Orderbook",
+      "keyStatistics": "Key Statistics",
+      "companyProfile": "Company Profile"
     }
+  },
+  "fieldName": {
+    "open": "Open",
+    "high": "High",
+    "low": "Low",
+    "lot": "Lot",
+    "value": "Value",
+    "freq": "Freq"
   },
   "home": {}
 }

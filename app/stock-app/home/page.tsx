@@ -4,14 +4,20 @@ import React, { useEffect, useState } from "react";
 import HomeSearch from "./components/HomeSearch";
 import HomeChart from "./components/HomeChart";
 import { useTranslation } from "react-i18next";
-import { getDataChart, getDataCompany } from "@api/stock-app/home/homeApi";
+import {
+  getDataChart,
+  getDataChartDetail,
+  getDataCompany,
+} from "@api/stock-app/home/homeApi";
 import HomeCompany from "./components/HomeCompany";
+import numeral from "numeral";
 
 const Home = () => {
   const { t } = useTranslation();
 
   const [listCompanies, setListCompanies] = useState<IHomeCompany[]>([]);
-  const [listCharts, setListCharts] = useState<IHomeChart[]>([]);
+  const [dataChart, setDataChart] = useState<number[][]>([]);
+  const [chartDetail, setChartDetail] = useState<IHomeChartDetail | null>(null);
   const [search, setSearch] = useState<IHomeSearch>({
     name: "",
     type: "TRENDING",
@@ -20,6 +26,7 @@ const Home = () => {
   useEffect(() => {
     fetchCompany();
     fetchChart();
+    fetchChartDetail();
   }, []);
 
   const fetchCompany = async () => {
@@ -36,7 +43,17 @@ const Home = () => {
     try {
       const data = await getDataChart();
       console.log(data);
-      setListCharts(data);
+      setDataChart(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const fetchChartDetail = async () => {
+    try {
+      const data = await getDataChartDetail();
+      console.log(data);
+      setChartDetail(data);
     } catch (error) {
       console.log(error);
     }
@@ -46,7 +63,7 @@ const Home = () => {
     <div className="home">
       <HomeSearch t={t} />
 
-      <HomeChart t={t} listCharts={listCharts} />
+      <HomeChart t={t} dataChart={dataChart} chartDetail={chartDetail} />
 
       <HomeCompany
         t={t}

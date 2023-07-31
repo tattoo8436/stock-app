@@ -1,18 +1,22 @@
-.stock-app-header{
-    display: flex;
-    justify-content: center;
-    color: $text-color;
-    padding: 14.5px;
+.stock-app-header {
+  display: flex;
+  justify-content: center;
+  color: $text-color;
+  padding: 14.5px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
 
-    &__icon {
-      font-size: 24px;
-      margin-right: 5px;
-    }
+  &__icon {
+    font-size: 24px;
+    margin-right: 5px;
+  }
 
-    &__text {
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 25px;
-      letter-spacing: 0px;
-    }
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0px;
+  }
 }

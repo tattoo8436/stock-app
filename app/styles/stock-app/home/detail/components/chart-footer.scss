@@ -1,0 +1,25 @@
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    color: $text-color;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+
+  .divider{
+    width: 1px;
+    background-color: $text-placeholder;
+    margin: 5px 0;
+  }
+
+  .active{
+    color: #fff;
+    background-color: $text-color;
+  }
+}

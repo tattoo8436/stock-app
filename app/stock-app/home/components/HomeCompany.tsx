@@ -6,6 +6,12 @@ import { Button } from "antd";
 import { getDataCompany } from "@/app/api/stock-app/home/homeApi";
 import Image from "next/image";
 import classNames from "classnames";
+import {
+  formatRealNumer,
+  formatValuePercent,
+  getColorValue,
+} from "@utils/index";
+import { useRouter } from "next/navigation";
 
 interface IProps {
   t: any;
@@ -16,16 +22,14 @@ interface IProps {
 
 const HomeCompany = (props: IProps) => {
   const { t, listCompanies, search, setSearch } = props;
-
-  const formatValue2 = (value2: number, percent: number) => {
-    if (value2 > 0) {
-      return `+${value2} (+${percent}%)`;
-    }
-    return `-${value2} (-${percent}%)`;
-  };
+  const router = useRouter();
 
   const handleChangeSearch = (type: string) => {
     setSearch((pre) => ({ ...pre, type: type }));
+  };
+
+  const handleChangePage = (companyId: number) => {
+    router.push(`/stock-app/home/detail/${companyId}`);
   };
 
   return (
@@ -71,7 +75,11 @@ const HomeCompany = (props: IProps) => {
       <div className="home-company__content">
         {listCompanies?.map((i) => {
           return (
-            <div key={i.id} className="home-company__content__item">
+            <div
+              key={i.id}
+              className="home-company__content__item"
+              onClick={() => handleChangePage(i.id)}
+            >
               <div className="item__left">
                 <div className="item__left__logo">
                   <Image src={i.logo} alt="" />
@@ -86,14 +94,13 @@ const HomeCompany = (props: IProps) => {
               </div>
 
               <div className="item__right">
-                <div className="item__right__value1">{i.value1}</div>
+                <div className="item__right__value1">
+                  {formatRealNumer(i.value1)}
+                </div>
                 <div
-                  className={classNames("item__right__value2", {
-                    positive: i.value2 >= 0,
-                    negative: i.value2 < 0,
-                  })}
+                  className={`item__right__value2 ${getColorValue(i.value2)}`}
                 >
-                  {formatValue2(i.value2, i.percent)}
+                  {formatValuePercent(i.value2, i.percent)}
                 </div>
               </div>
             </div>
