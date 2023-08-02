@@ -11,6 +11,7 @@ import {
 } from "@api/stock-app/home/homeApi";
 import HomeCompany from "./components/HomeCompany";
 import numeral from "numeral";
+import "@config/i18n";
 
 const Home = () => {
   const { t } = useTranslation();

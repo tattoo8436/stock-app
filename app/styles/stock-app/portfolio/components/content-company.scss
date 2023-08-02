@@ -1,0 +1,86 @@
+.content-company {
+  color: $text-color;
+
+  &__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.34px;
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    &__item {
+      .item {
+        &__header {
+          display: flex;
+
+          &__logo {
+            margin-right: 16px;
+          }
+
+          &__text {
+            &__name {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 20px; /* 142.857% */
+              letter-spacing: -0.084px;
+              color: $text-color;
+            }
+
+            &__description {
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 16px;
+              color: $text-color-light;
+            }
+          }
+        }
+
+        &__footer {
+          display: flex;
+          justify-content: space-between;
+
+          &__left,
+          &__center,
+          &__right {
+            &__label {
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 16px; /* 160% */
+            }
+
+            &__value {
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 16px; /* 160% */
+            }
+          }
+
+          &__left {
+            text-align: left;
+          }
+
+          &__center {
+            text-align: center;
+          }
+
+          &__right {
+            text-align: right;
+          }
+        }
+      }
+
+      .divider {
+        height: 1px;
+        background-color: $divider;
+        margin: 16px 0;
+      }
+    }
+  }
+}

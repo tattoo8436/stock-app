@@ -6,17 +6,13 @@ export const metadata: Metadata = {
   title: "Stock App",
 };
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="stock-app">
       <Header />
 
       <div className="stock-app__content">{children}</div>
-      
+
       <Footer />
     </div>
   );

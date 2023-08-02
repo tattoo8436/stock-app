@@ -1,6 +1,7 @@
+import { baseUrlApi } from "@/app/utils";
 
 export const getCompanyDetail = async () => {
-  const res = await fetch('http://localhost:3000/api/stock-app/home/company/detail');
+  const res = await fetch(`${baseUrlApi}/stock-app/home/company/detail`);
   if (!res.ok) {
     throw new Error("Error");
   }

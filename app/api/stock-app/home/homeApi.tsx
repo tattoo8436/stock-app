@@ -1,5 +1,9 @@
+import { baseUrlApi } from "@/app/utils";
+
 export const getDataCompany = async () => {
-  const res = await fetch("http://localhost:3000/api/stock-app/home/company");
+  const res = await fetch(
+    `${baseUrlApi}/stock-app/home/company`
+  );
   if (!res.ok) {
     throw new Error("Error");
   }
@@ -7,7 +11,9 @@ export const getDataCompany = async () => {
 };
 
 export const getDataChartDetail = async () => {
-  const res = await fetch("http://localhost:3000/api/stock-app/home/chart/detail");
+  const res = await fetch(
+    `${baseUrlApi}/stock-app/home/chart/detail`
+  );
   if (!res.ok) {
     throw new Error("Error");
   }
@@ -15,7 +21,9 @@ export const getDataChartDetail = async () => {
 };
 
 export const getDataChart = async () => {
-  const res = await fetch('http://localhost:3000/api/stock-app/home/chart');
+  const res = await fetch(
+    `${baseUrlApi}/stock-app/home/chart`
+  );
   if (!res.ok) {
     throw new Error("Error");
   }

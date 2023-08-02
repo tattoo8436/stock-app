@@ -9,6 +9,10 @@ import ChartHeader from "./components/ChartHeader";
 import ChartDetail from "./components/ChartDetail";
 import ChartContent from "./components/ChartContent";
 import ChartFooter from "./components/ChartFooter";
+import ContentFilter from "./components/ContentFilter";
+import ContentHeader from "./components/ContentHeader";
+import ContentTable from "./components/ContentTable";
+import "@config/i18n";
 
 const Detail = ({ params }: { params: { companyId: number } }) => {
   const { t } = useTranslation();
@@ -16,6 +20,7 @@ const Detail = ({ params }: { params: { companyId: number } }) => {
     null
   );
   const [search, setSearch] = useState<string>("1M");
+  const [tab, setTab] = useState<string>("KEYSTATISTICS");
 
   useEffect(() => {
     fetchCompanyDetail();
@@ -43,6 +48,12 @@ const Detail = ({ params }: { params: { companyId: number } }) => {
         <ChartContent t={t} dataChart={companyDetail?.dataChart ?? []} />
 
         <ChartFooter search={search} setSearch={setSearch} />
+
+        <ContentFilter t={t} tab={tab} setTab={setTab} />
+
+        <ContentHeader t={t} companyDetail={companyDetail} />
+
+        <ContentTable t={t} companyDetail={companyDetail} />
       </div>
 
       <Footer t={t} />

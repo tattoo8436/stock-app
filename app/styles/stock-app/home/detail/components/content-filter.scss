@@ -1,0 +1,30 @@
+.content-filter {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  margin-bottom: 20px;
+
+  &__item {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: $gray-light;
+    text-wrap: nowrap;
+  }
+
+  &__item {
+    margin-right: 10px;
+  }
+
+  .active{
+    color: #fff;
+    background-color: $text-color;
+  }
+}

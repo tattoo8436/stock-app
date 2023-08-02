@@ -1,3 +1,5 @@
+"use client";
+
 import i18next from "i18next";
 import enTranslation from "@locales/en.json";
 import { initReactI18next } from "react-i18next";
