@@ -60,6 +60,7 @@ const Watchlist = () => {
                     swiped: idDelete === i.id,
                   })}
                   onClick={() => handleDelete(i.id)}
+                  onBlur={() => console.log("a")}
                 >
                   <div className="item__left">
                     <div className="item__left__logo">

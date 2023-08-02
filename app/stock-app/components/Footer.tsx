@@ -35,7 +35,12 @@ const Footer = () => {
       >
         <FiStar />
       </div>
-      <div className="stock-app-footer__item">
+      <div
+        className={classNames("stock-app-footer__item", {
+          active: pathName === "/stock-app/portfolio",
+        })}
+        onClick={() => handleChangePage("/stock-app/portfolio")}
+      >
         <LuPieChart />
       </div>
       <div className="stock-app-footer__item">

@@ -20,7 +20,13 @@
       "companyProfile": "Company Profile",
       "netIncome": "Net Income",
       "marketCap": "Market Cap",
-      "currentShareOutstanding": "Current Share Outstanding"
+      "currentShareOutstanding": "Current Share Outstanding",
+      "profitLoss": "Profile/Loss",
+      "capitalGain": "Capital Gain",
+      "open": "Open",
+      "stockList": "Stock List",
+      "investment": "Investment",
+      "allocate": "Allocate"
     }
   },
   "fieldName": {
@@ -38,6 +44,7 @@
   },
   "home": {},
   "page": {
-    "watchlist": "Watchlist"
+    "watchlist": "Watchlist",
+    "portfolio": "Portfolio"
   }
 }

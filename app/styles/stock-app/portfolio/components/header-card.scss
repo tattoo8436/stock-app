@@ -1,0 +1,61 @@
+.header-card {
+  color: $text-color;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: $primary;
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.084px;
+    text-align: center;
+  }
+
+  &__content {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 112.5% */
+    letter-spacing: -0.672px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+
+    &__left,
+    &__center,
+    &__right {
+      &__label {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+      }
+
+      &__value {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px; /* 133.333% */
+      }
+    }
+
+    &__left{
+        text-align: left;
+    }
+
+    &__center{
+        text-align: center;
+    }
+
+    &__right{
+        text-align: right;
+    }
+  }
+}
