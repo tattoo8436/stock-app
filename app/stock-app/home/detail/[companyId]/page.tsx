@@ -12,6 +12,7 @@ import ChartFooter from "./components/ChartFooter";
 import ContentFilter from "./components/ContentFilter";
 import ContentHeader from "./components/ContentHeader";
 import ContentTable from "./components/ContentTable";
+import "@config/i18n";
 
 const Detail = ({ params }: { params: { companyId: number } }) => {
   const { t } = useTranslation();
