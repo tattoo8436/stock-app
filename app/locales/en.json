@@ -3,7 +3,8 @@
     "command": {
       "search": "Search",
       "sell": "Sell",
-      "buy": "Buy"
+      "buy": "Buy",
+      "delete": "Delete"
     },
     "label": {
       "stockvest": "Stockvest",
@@ -35,5 +36,8 @@
     "q3": "Q3",
     "q4": "Q4"
   },
-  "home": {}
+  "home": {},
+  "page": {
+    "watchlist": "Watchlist"
+  }
 }
