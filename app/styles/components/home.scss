@@ -1,0 +1,190 @@
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    color: $text-color;
+    padding: 14.5px;
+
+    &__icon {
+      font-size: 24px;
+      margin-right: 5px;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+      letter-spacing: 0px;
+    }
+  }
+
+  &__content {
+    padding: 10px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    &__search {
+      padding-bottom: 20px;
+
+      .search {
+        &__input {
+          background-color: #f9f9f9;
+          height: 44px;
+          padding-left: 16px;
+          border-radius: 12px;
+          border: none;
+
+          .ant-input {
+            background-color: #f9f9f9;
+          }
+
+          .ant-input-prefix {
+            font-size: 16px;
+            opacity: 0.3;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+
+    .content-chart {
+      &__header {
+        &__title {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 28px;
+          letter-spacing: -0.34px;
+        }
+
+        &__content {
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 44px; /* 122.222% */
+          letter-spacing: -0.792px;
+        }
+
+        &__footer {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px; /* 150% */
+          letter-spacing: -0.176px;
+          color: $danger;
+        }
+      }
+
+      &__content {
+        height: 203px;
+        background-color: #ccc;
+      }
+    }
+
+    .content-company {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          padding: 5px 10px;
+          border-radius: 10px;
+          background-color: #f2f4f6;
+          color: $text-color;
+        }
+
+        .active {
+          background-color: #2e3032;
+          color: #fff;
+        }
+      }
+
+      &__content {
+        flex-grow: 1;
+
+        &__item {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+
+          .item {
+            &__left {
+              display: flex;
+
+              &__logo {
+                margin-right: 16px;
+              }
+
+              &__text {
+                &__name {
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 20px; /* 142.857% */
+                  letter-spacing: -0.084px;
+                  color: $text-color;
+                }
+
+                &__description {
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 16px;
+                  color: $text-color-light;
+                }
+              }
+            }
+
+            &__right {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+
+              &__value1 {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px; /* 142.857% */
+                letter-spacing: -0.084px;
+                color: $text-color;
+              }
+
+              &__value2 {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+              }
+
+              .positive {
+                color: $safe;
+              }
+
+              .negative {
+                color: $danger;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    height: 56px;
+    background-color: #ccc;
+  }
+}

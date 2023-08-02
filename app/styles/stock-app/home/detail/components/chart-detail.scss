@@ -1,0 +1,40 @@
+.chart-detail {
+  display: flex;
+
+  &__left {
+    &__value1 {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 44px; /* 122.222% */
+      letter-spacing: -0.792px;
+    }
+
+    &__value2 {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+      letter-spacing: -0.176px;
+    }
+  }
+
+  &__right {
+    &__item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-left: 5px;
+
+      .item-wrapper {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        padding: 5px 10px;
+        border: 1px solid $text-placeholder;
+        border-radius: 10px;
+      }
+    }
+  }
+}

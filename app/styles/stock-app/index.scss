@@ -1,0 +1,26 @@
+.stock-app {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+
+  &:has(.stock-app-detail){
+    .stock-app-footer, .stock-app-header{
+      display: none;
+    }
+
+    .stock-app__content{
+      padding-top: 0;
+    }
+  }
+
+  @import "./components/header";
+  @import "./components/footer";
+
+  &__content {
+    padding: 10px 20px 0 20px;
+    flex: 1;
+
+    @import "./home/index";
+  }
+}

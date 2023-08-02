@@ -1,0 +1,29 @@
+.content-table {
+  .ant-table-cell {
+    color: $text-color;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+  }
+
+  .ant-table-thead{
+    .ant-table-cell{
+        font-weight: 600;
+    }
+  }
+
+  .ant-table-thead, .ant-table-row {
+    .text-bold {
+      font-weight: 600;
+    }
+
+    .align-right{
+        text-align: right;
+    }
+
+    .align-center{
+        text-align: center;
+    }
+  }
+}

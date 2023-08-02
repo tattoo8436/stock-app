@@ -1,0 +1,39 @@
+{
+  "name": "stockapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ant-design/plots": "^1.2.5",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.16",
+    "@types/react-dom": "18.2.7",
+    "antd": "^5.7.3",
+    "apexcharts": "^3.41.0",
+    "autoprefixer": "10.4.14",
+    "classnames": "^2.3.2",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12",
+    "i18next": "^23.2.11",
+    "next": "13.4.12",
+    "normalize.css": "^8.0.1",
+    "numeral": "^2.0.6",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-dom": "18.2.0",
+    "react-i18next": "^13.0.2",
+    "react-icons": "^4.10.1",
+    "sass": "^1.64.1",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/numeral": "^2.0.2"
+  }
+}
