@@ -74,3 +74,29 @@ interface IPortfolioCompany {
   allocate: number;
   allocatePercent: number;
 }
+
+interface ITransactionHistory {
+  date: string;
+  value1: number;
+  value2: number;
+  value3: number;
+}
+
+interface IPortfolioDetail {
+  id: number;
+  logo: any;
+  name: string;
+  description: string;
+  value1: number;
+  value2: number;
+  percent: number;
+  nilaiInvestasi: {
+    allocate: number;
+    lot: number;
+    averagePrice: number;
+    investment: number;
+    profitLoss: number;
+    profitLossPercent: number;
+  };
+  transactionHistory: ITransactionHistory[];
+}

@@ -1,0 +1,27 @@
+.portfolio-detail-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+    color: $text-color;
+
+    &__icon {
+        margin-right: 10px;
+
+        &__item {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        /* 140% */
+        letter-spacing: -0.34px;
+    }
+}

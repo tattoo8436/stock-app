@@ -1,0 +1,67 @@
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    .item {
+        &__left {
+            display: flex;
+
+            &__logo {
+                margin-right: 16px;
+            }
+
+            &__text {
+                &__name {
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 20px;
+                    /* 142.857% */
+                    letter-spacing: -0.084px;
+                    color: $text-color;
+                }
+
+                &__description {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    color: $text-color-light;
+                }
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            &__value1 {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+                /* 142.857% */
+                letter-spacing: -0.084px;
+                color: $text-color;
+            }
+
+            &__value2 {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+            }
+
+            .positive {
+                color: $safe;
+            }
+
+            .negative {
+                color: $danger;
+            }
+        }
+    }
+}

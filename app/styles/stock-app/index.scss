@@ -4,7 +4,7 @@
   flex-direction: column;
   position: relative;
 
-  &:has(.stock-app-detail) {
+  &:has(.stock-app-detail, .portfolio-detail) {
     .stock-app-footer,
     .stock-app-header {
       display: none;

@@ -1,0 +1,18 @@
+.portfolio-detail-footer {
+    position: sticky;
+    bottom: 0;
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    padding: 16px 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: -0.176px;
+    border-radius: 16px;
+}
