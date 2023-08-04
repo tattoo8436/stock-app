@@ -14,6 +14,13 @@ export const formatRealNumer = (value: number | undefined) => {
   return numeral(value).format("0,0.00");
 };
 
+export const formatIntegerNumer = (value: number | undefined) => {
+  if (value === undefined) {
+    return "";
+  }
+  return numeral(value).format("0,0");
+};
+
 export const getColorValue = (value: number | undefined) => {
   if (value === undefined) {
     return "";

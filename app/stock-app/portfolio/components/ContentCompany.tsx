@@ -5,6 +5,7 @@ import {
 } from "@/app/utils";
 import { TFunction } from "i18next";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface IProps {
@@ -14,6 +15,11 @@ interface IProps {
 
 const ContentCompany = (props: IProps) => {
   const { t, listCompanies } = props;
+  const router = useRouter();
+
+  const handleChangePage = (companyId: number) => {
+    router.push(`/stock-app/portfolio/detail/${companyId}`);
+  };
 
   return (
     <div className="content-company">
@@ -24,7 +30,11 @@ const ContentCompany = (props: IProps) => {
       <div className="content-company__content">
         {listCompanies?.map((i) => {
           return (
-            <div key={i.id} className="content-company__content__item">
+            <div
+              key={i.id}
+              className="content-company__content__item"
+              onClick={() => handleChangePage(i.id)}
+            >
               <div className="item__header">
                 <div className="item__header__logo">
                   <Image src={i.logo} alt="" />
