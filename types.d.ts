@@ -100,3 +100,21 @@ interface IPortfolioDetail {
   };
   transactionHistory: ITransactionHistory[];
 }
+
+interface ICompanyBuySellTable {
+  lot1: number;
+  bid: number;
+  ask: number;
+  lot2: number;
+}
+
+interface ICompanyBuySell {
+  buyingPower: number;
+  dataTable: IHomeDetailBuySellTable[];
+  brokerFee: number;
+  exchangeFee: number;
+  id: number;
+  logo: any;
+  name: string;
+  description: string;
+}

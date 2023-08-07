@@ -7,3 +7,11 @@ export const getCompanyDetail = async () => {
   }
   return res.json();
 };
+
+export const getDataBuySell = async () => {
+  const res = await fetch(`${baseUrlApi}/stock-app/home/company/buy-sell`);
+  if (!res.ok) {
+    throw new Error("Error");
+  }
+  return res.json();
+};

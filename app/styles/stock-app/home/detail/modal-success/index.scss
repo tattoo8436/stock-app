@@ -1,0 +1,44 @@
+.modal-success {
+  color: $text-color;
+
+  .ant-modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.34px;
+  }
+
+  &__message {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.084px;
+    color: #8c8f93;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    background-color: $primary;
+    border-radius: 16px;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.176px;
+    width: 90%;
+    text-align: center;
+  }
+}

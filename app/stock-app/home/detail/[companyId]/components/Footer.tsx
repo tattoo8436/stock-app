@@ -1,11 +1,17 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 interface IProps {
   t: any;
+  setOpenModalBuy: Dispatch<SetStateAction<boolean>>;
+  setOpenModalSell: Dispatch<SetStateAction<boolean>>;
 }
 
 const Footer = (props: IProps) => {
-  const { t } = props;
+  const { t, setOpenModalBuy, setOpenModalSell } = props;
+
+  const handleOpenModalBuy = () => {
+    setOpenModalBuy(true);
+  };
 
   return (
     <div className="stock-app-detail-footer">
@@ -13,7 +19,10 @@ const Footer = (props: IProps) => {
         {t("common.command.sell")}
       </div>
 
-      <div className="stock-app-detail-footer__right">
+      <div
+        className="stock-app-detail-footer__right"
+        onClick={() => handleOpenModalBuy()}
+      >
         {t("common.command.buy")}
       </div>
     </div>

@@ -4,7 +4,10 @@
       "search": "Search",
       "sell": "Sell",
       "buy": "Buy",
-      "delete": "Delete"
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "done": "Done"
     },
     "label": {
       "stockvest": "Stockvest",
@@ -46,9 +49,34 @@
     "allocate": "Allocate",
     "averagePrice": "Average Price",
     "investment": "Investment",
-    "profitLoss": "Profit/Loss"
+    "profitLoss": "Profit/Loss",
+    "bid": "Bid",
+    "ask": "Ask",
+    "buyOrderLot":"Buy Order Lot",
+    "price": "Price",
+    "brokerFee": "Broker Fee",
+    "exchangeFee": "Exchange Fee",
+    "payment": "Payment"
   },
   "home": {},
+  "homeDetail": {
+    "modalBuy": {
+      "buyStock": "Buy Stock",
+      "buyingPower": "Buying Power",
+      "investmentFee": "Investment Fee",
+      "buying": "Buying",
+      "buyOrderLot": "Buy Order Lot",
+      "price": "Price",
+      "messageBuy": "Click your buying price below!"
+    },
+    "modalConfirmBuy": {
+      "title": "Order Confirmation"
+    },
+    "modalSuccess": {
+      "title": "Successfully!",
+      "message": "Order sent successfully."
+    }
+  },
   "page": {
     "watchlist": "Watchlist",
     "portfolio": "Portfolio",

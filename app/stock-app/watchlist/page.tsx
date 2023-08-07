@@ -53,8 +53,8 @@ const Watchlist = () => {
       <div className="watchlist__content">
         {listCompanies?.map((i) => {
           return (
-            <>
-              <div key={i.id} className="watchlist__content__item">
+            <div key={i.id}>
+              <div className="watchlist__content__item">
                 <div
                   className={classNames("item-wrapper", {
                     swiped: idDelete === i.id,
@@ -99,7 +99,7 @@ const Watchlist = () => {
               </div>
 
               <div className="divider"></div>
-            </>
+            </div>
           );
         })}
       </div>

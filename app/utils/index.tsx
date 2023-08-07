@@ -31,5 +31,5 @@ export const getColorValue = (value: number | undefined) => {
   return "negative";
 };
 
-//export const baseUrlApi = "http://localhost:3000/api";
-export const baseUrlApi = "https://stock-app-olive.vercel.app/api";
+export const baseUrlApi = "http://localhost:3000/api";
+//export const baseUrlApi = "https://stock-app-olive.vercel.app/api";

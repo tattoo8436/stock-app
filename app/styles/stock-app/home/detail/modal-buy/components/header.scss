@@ -1,0 +1,43 @@
+.header {
+  &__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.34px;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+
+    &__item {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      &__label {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: -0.084px;
+      }
+
+      &__value {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: -0.084px;
+      }
+    }
+  }
+}
