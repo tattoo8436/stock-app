@@ -31,7 +31,15 @@
       "investment": "Investment",
       "allocate": "Allocate",
       "nilaiInvestasi": "Nilai Investasi",
-      "transactionHistory": "Transaction History"
+      "transactionHistory": "Transaction History",
+      "hari": "Hari",
+      "7hari": "7 Hari",
+      "30hari": "30 Hari",
+      "90hari": "90 Hari",
+      "today": "Today",
+      "periode": "Periode",
+      "match": "Match",
+      "withDrawal": "Withdrawal"
     }
   },
   "fieldName": {
@@ -86,6 +94,12 @@
     "modalSuccess": {
       "title": "Successfully!",
       "message": "Order sent successfully."
+    }
+  },
+  "transaction": {
+    "label": {
+      "transactionToday": "Transaction Today",
+      "yesterday": "Yesterday"
     }
   },
   "page": {

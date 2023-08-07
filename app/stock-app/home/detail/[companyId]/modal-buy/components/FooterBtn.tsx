@@ -26,7 +26,7 @@ const FooterBtn = (props: IProps) => {
         })}
         onClick={() => handleOpenModalConfirm()}
       >
-        {t("common.command.sell")}
+        {t("common.command.buy")}
       </div>
     </div>
   );

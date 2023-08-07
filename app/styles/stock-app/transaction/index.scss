@@ -1,0 +1,7 @@
+.transaction{
+    color: $text-color;
+    
+    @import './components/header-filter';
+    @import './components/transaction-today';
+    @import './components/yesterday';
+}

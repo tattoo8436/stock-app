@@ -121,3 +121,18 @@ interface ICompanyBuySell {
   profitLoss: number;
   profitLossPercent: number;
 }
+
+interface ICompanyTransaction {
+  id: number;
+  logo: any;
+  name: string;
+  value1: number;
+  value2: number;
+  lot: number;
+  status: string;
+}
+
+interface ITransaction{
+  transactionToday: ICompanyTransaction[],
+  yesterday: ICompanyTransaction[]
+}
