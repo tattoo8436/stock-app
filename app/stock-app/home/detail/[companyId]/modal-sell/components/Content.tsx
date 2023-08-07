@@ -7,37 +7,37 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 interface IProps {
   t: TFunction<"translation", undefined>;
   companyBuySell: ICompanyBuySell | null;
-  buyOrderLot: number;
-  setBuyOrderLot: React.Dispatch<React.SetStateAction<number>>;
+  lot: number;
+  setLot: React.Dispatch<React.SetStateAction<number>>;
   price: number;
   setPrice: React.Dispatch<React.SetStateAction<number>>;
-  buying: number;
-  setBuying: React.Dispatch<React.SetStateAction<number>>;
+  selling: number;
+  setSelling: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const Content = (props: IProps) => {
   const {
     t,
-    buyOrderLot,
-    setBuyOrderLot,
-    buying,
-    setBuying,
+    lot,
+    setLot,
+    selling,
+    setSelling,
     companyBuySell,
     price,
     setPrice,
   } = props;
 
-  const handleChangeBuy = (value: number) => {
-    setBuying(value);
+  const handleChangeSell = (value: number) => {
+    setSelling(value);
   };
 
-  const handleAddBuyOrderLot = () => {
-    setBuyOrderLot((pre) => pre + 1);
+  const handleAddLot = () => {
+    setLot((pre) => pre + 1);
   };
 
-  const handleSubBuyOrderLot = () => {
-    if (buyOrderLot > 0) {
-      setBuyOrderLot((pre) => pre - 1);
+  const handleSubLot = () => {
+    if (lot > 0) {
+      setLot((pre) => pre - 1);
     }
   };
 
@@ -53,44 +53,44 @@ const Content = (props: IProps) => {
 
   return (
     <div className="content">
-      <div className="content__buying">
-        <div className="content__buying__left">
-          {t("homeDetail.modalBuy.buying")}
+      <div className="content__selling">
+        <div className="content__selling__left">
+          {t("homeDetail.modalSell.selling")}
         </div>
 
-        <div className="content__buying__right">
+        <div className="content__selling__right">
           <div
-            className={classNames("content__buying__right__item", {
-              active: buying === 25,
+            className={classNames("content__selling__right__item", {
+              active: selling === 25,
             })}
-            onClick={() => handleChangeBuy(25)}
+            onClick={() => handleChangeSell(25)}
           >
             25%
           </div>
 
           <div
-            className={classNames("content__buying__right__item", {
-              active: buying === 50,
+            className={classNames("content__selling__right__item", {
+              active: selling === 50,
             })}
-            onClick={() => handleChangeBuy(50)}
+            onClick={() => handleChangeSell(50)}
           >
             50%
           </div>
 
           <div
-            className={classNames("content__buying__right__item", {
-              active: buying === 75,
+            className={classNames("content__selling__right__item", {
+              active: selling === 75,
             })}
-            onClick={() => handleChangeBuy(75)}
+            onClick={() => handleChangeSell(75)}
           >
             75%
           </div>
 
           <div
-            className={classNames("content__buying__right__item", {
-              active: buying === 100,
+            className={classNames("content__selling__right__item", {
+              active: selling === 100,
             })}
-            onClick={() => handleChangeBuy(100)}
+            onClick={() => handleChangeSell(100)}
           >
             100%
           </div>
@@ -99,7 +99,7 @@ const Content = (props: IProps) => {
 
       <div className="content__input">
         <div className="content__input__left">
-          {t("homeDetail.modalBuy.buyOrderLot")}
+          {t("fieldName.lot")}
         </div>
 
         <div className="content__input__right">
@@ -108,12 +108,12 @@ const Content = (props: IProps) => {
             icon={<FiMinus />}
             type="text"
             size="small"
-            onClick={() => handleSubBuyOrderLot()}
+            onClick={() => handleSubLot()}
           ></Button>
 
           <Input
             type="number"
-            value={buyOrderLot}
+            value={lot}
             className="content__input__right__value"
             size="small"
           />
@@ -123,14 +123,14 @@ const Content = (props: IProps) => {
             icon={<FiPlus />}
             type="text"
             size="small"
-            onClick={() => handleAddBuyOrderLot()}
+            onClick={() => handleAddLot()}
           ></Button>
         </div>
       </div>
 
       <div className="content__input">
         <div className="content__input__left">
-          {t("homeDetail.modalBuy.price")}
+          {t("fieldName.price")}
         </div>
 
         <div className="content__input__right">
@@ -159,7 +159,7 @@ const Content = (props: IProps) => {
         </div>
       </div>
 
-      <div className="content__msg">{t('homeDetail.modalBuy.messageBuy')}</div>
+      <div className="content__msg">{t("homeDetail.modalSell.messageSell")}</div>
     </div>
   );
 };

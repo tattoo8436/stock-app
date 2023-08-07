@@ -13,9 +13,16 @@ const Footer = (props: IProps) => {
     setOpenModalBuy(true);
   };
 
+  const handleOpenModalSell = () => {
+    setOpenModalSell(true);
+  };
+
   return (
     <div className="stock-app-detail-footer">
-      <div className="stock-app-detail-footer__left">
+      <div
+        className="stock-app-detail-footer__left"
+        onClick={() => handleOpenModalSell()}
+      >
         {t("common.command.sell")}
       </div>
 

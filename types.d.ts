@@ -117,4 +117,7 @@ interface ICompanyBuySell {
   logo: any;
   name: string;
   description: string;
+  lot: number;
+  profitLoss: number;
+  profitLossPercent: number;
 }

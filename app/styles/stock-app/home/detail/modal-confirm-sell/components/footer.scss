@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+
+  &__left, &__right {
+    width: 50%;
+    padding: 16px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.176px;
+    border-radius: 16px;
+  }
+
+  &__left {
+    margin-right: 20px;
+    border: 1px solid $primary;
+  }
+
+  &__right{
+    background-color: $primary;
+  }
+}

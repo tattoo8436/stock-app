@@ -56,7 +56,9 @@
     "price": "Price",
     "brokerFee": "Broker Fee",
     "exchangeFee": "Exchange Fee",
-    "payment": "Payment"
+    "payment": "Payment",
+    "proceeds": "Proceeds",
+    "processAmount": "Process Amount"
   },
   "home": {},
   "homeDetail": {
@@ -69,8 +71,17 @@
       "price": "Price",
       "messageBuy": "Click your buying price below!"
     },
+    "modalSell": {
+      "sellStock": "Sell Stock",
+      "selling": "Selling",
+      "price": "Price",
+      "messageSell": "Click your selling price below."
+    },
     "modalConfirmBuy": {
       "title": "Order Confirmation"
+    },
+    "modalConfirmSell": {
+      "title": "Sell Confirmation"
     },
     "modalSuccess": {
       "title": "Successfully!",

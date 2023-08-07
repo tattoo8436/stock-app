@@ -39,6 +39,9 @@ export async function GET(req: Request) {
     logo: require("@icons/company_logo_3.svg"),
     name: "ACES",
     description: "Ace Hardware Indonesia Tbk",
+    lot: 26,
+    profitLoss: -158496,
+    profitLossPercent: -8.01,
   };
   return new Response(JSON.stringify(res));
 }

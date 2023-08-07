@@ -6,6 +6,7 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 import FooterBtn from "./components/FooterBtn";
 import ModalConfirmBuy from "../modal-confirm-buy";
+import ModalConfirmSell from "../modal-confirm-sell";
 
 interface IProps {
   t: TFunction<"translation", undefined>;
@@ -15,12 +16,13 @@ interface IProps {
   companyBuySell: ICompanyBuySell | null;
 }
 
-const ModalBuy = (props: IProps) => {
-  const { t, openModal, setOpenModal, setOpenModalSuccess, companyBuySell } = props;
+const ModalSell = (props: IProps) => {
+  const { t, openModal, setOpenModal, setOpenModalSuccess, companyBuySell } =
+    props;
 
-  const [buyOrderLot, setBuyOrderLot] = useState<number>(0);
-  const [price, setPrice] = useState<number>(570);
-  const [buying, setBuying] = useState<number>(0);
+  const [lot, setLot] = useState<number>(0);
+  const [price, setPrice] = useState<number>(560);
+  const [selling, setSelling] = useState<number>(0);
   const [openModalConfirmBuy, setOpenModalConfirmBuy] =
     useState<boolean>(false);
 
@@ -30,47 +32,42 @@ const ModalBuy = (props: IProps) => {
 
   return (
     <Modal
-      className="modal-buy"
+      className="modal-sell"
       open={openModal}
       onCancel={() => handleClose()}
       footer={null}
       centered
     >
-      <Header
-        t={t}
-        companyBuySell={companyBuySell}
-        buyOrderLot={buyOrderLot}
-        price={price}
-      />
+      <Header t={t} companyBuySell={companyBuySell} lot={lot} price={price} />
 
       <Content
         t={t}
         companyBuySell={companyBuySell}
-        buyOrderLot={buyOrderLot}
-        setBuyOrderLot={setBuyOrderLot}
+        lot={lot}
+        setLot={setLot}
         price={price}
         setPrice={setPrice}
-        buying={buying}
-        setBuying={setBuying}
+        selling={selling}
+        setSelling={setSelling}
       />
 
       <Footer t={t} companyBuySell={companyBuySell} />
 
       <FooterBtn
         t={t}
-        buyOrderLot={buyOrderLot}
-        buying={buying}
+        lot={lot}
+        selling={selling}
         price={price}
         setOpenModal={setOpenModalConfirmBuy}
       />
 
-      <ModalConfirmBuy
+      <ModalConfirmSell
         t={t}
         openModal={openModalConfirmBuy}
         setOpenModal={setOpenModalConfirmBuy}
         setOpenModalSuccess={setOpenModalSuccess}
-        buying={buying}
-        buyOrderLot={buyOrderLot}
+        selling={selling}
+        lot={lot}
         price={price}
         companyBuySell={companyBuySell}
       />
@@ -78,4 +75,4 @@ const ModalBuy = (props: IProps) => {
   );
 };
 
-export default ModalBuy;
+export default ModalSell;

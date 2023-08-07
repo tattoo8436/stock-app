@@ -18,6 +18,7 @@ import ContentTable from "./components/ContentTable";
 import "@config/i18n";
 import ModalBuy from "./modal-buy";
 import ModalSuccess from "./modal-success";
+import ModalSell from "./modal-sell";
 
 const Detail = ({ params }: { params: { companyId: number } }) => {
   const { t } = useTranslation();
@@ -88,6 +89,14 @@ const Detail = ({ params }: { params: { companyId: number } }) => {
         t={t}
         openModal={openModalBuy}
         setOpenModal={setOpenModalBuy}
+        setOpenModalSuccess={setOpenModalSuccess}
+        companyBuySell={companyBuySell}
+      />
+
+      <ModalSell
+        t={t}
+        openModal={openModalSell}
+        setOpenModal={setOpenModalSell}
         setOpenModalSuccess={setOpenModalSuccess}
         companyBuySell={companyBuySell}
       />

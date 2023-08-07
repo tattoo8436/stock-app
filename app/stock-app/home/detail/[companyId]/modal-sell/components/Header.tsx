@@ -5,19 +5,19 @@ import React from "react";
 interface IProps {
   t: TFunction<"translation", undefined>;
   companyBuySell: ICompanyBuySell | null;
-  buyOrderLot: number;
+  lot: number;
   price: number;
 }
 
 const Header = (props: IProps) => {
-  const { t, companyBuySell, buyOrderLot, price } = props;
+  const { t, companyBuySell, lot, price } = props;
 
-  const getInvestmentFee = () => {
-    if (buyOrderLot === 0 || price === 0) {
+  const getProceeds = () => {
+    if (lot === 0 || price === 0) {
       return 0;
     }
     return (
-      price * buyOrderLot * 100 +
+      price * lot * 100 +
       (companyBuySell?.brokerFee ?? 0) +
       (companyBuySell?.exchangeFee ?? 0)
     );
@@ -25,24 +25,35 @@ const Header = (props: IProps) => {
 
   return (
     <div className="header">
-      <div className="header__title">{t("homeDetail.modalBuy.buyStock")}</div>
+      <div className="header__title">{t("homeDetail.modalSell.sellStock")}</div>
 
       <div className="header__content">
         <div className="header__content__item">
           <div className="header__content__item__label">
-            {t("homeDetail.modalBuy.buyingPower")}
+            {t("fieldName.lot")}
           </div>
           <div className="header__content__item__value">
-            {`Rp${formatIntegerNumer(companyBuySell?.buyingPower)}`}
+            {`${formatIntegerNumer(companyBuySell?.lot)} Lot`}
           </div>
         </div>
 
         <div className="header__content__item">
           <div className="header__content__item__label">
-            {t("homeDetail.modalBuy.investmentFee")}
+            {t("fieldName.profitLoss")}
+          </div>
+          <div className="header__content__item__value negative">
+            {`Rp${formatIntegerNumer(
+              companyBuySell?.profitLoss
+            )} (${formatIntegerNumer(companyBuySell?.profitLossPercent)}%)`}
+          </div>
+        </div>
+
+        <div className="header__content__item">
+          <div className="header__content__item__label">
+            {t("fieldName.proceeds")}
           </div>
           <div className="header__content__item__value">
-            {`Rp${formatIntegerNumer(getInvestmentFee())}`}
+            {`Rp${formatIntegerNumer(getProceeds())}`}
           </div>
         </div>
       </div>

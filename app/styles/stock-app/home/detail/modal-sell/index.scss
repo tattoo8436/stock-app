@@ -1,0 +1,14 @@
+.modal-sell {
+  color: $text-color;
+  height: 80vh;
+  overflow-y: auto;
+
+  .ant-modal-content{
+    padding-bottom: 0;
+  }
+
+  @import "./components/header";
+  @import "./components/content";
+  @import "./components/footer";
+  @import "./components/footer-btn";
+}

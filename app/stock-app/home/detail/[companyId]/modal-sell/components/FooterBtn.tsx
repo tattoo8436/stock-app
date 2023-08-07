@@ -5,14 +5,14 @@ import React, { Dispatch, SetStateAction } from "react";
 
 interface IProps {
   t: TFunction<"translation", undefined>;
-  buyOrderLot: number;
+  lot: number;
   price: number;
-  buying: number;
+  selling: number;
   setOpenModal: Dispatch<SetStateAction<boolean>>;
 }
 
 const FooterBtn = (props: IProps) => {
-  const { t, buyOrderLot, buying, price, setOpenModal } = props;
+  const { t, lot, selling, price, setOpenModal } = props;
 
   const handleOpenModalConfirm = () => {
     setOpenModal(true);
@@ -22,7 +22,7 @@ const FooterBtn = (props: IProps) => {
     <div className="footer-btn">
       <div
         className={classNames("footer-btn__content", {
-          disabled: buying === 0 || buyOrderLot === 0 || price === 0,
+          disabled: selling === 0 || lot === 0 || price === 0,
         })}
         onClick={() => handleOpenModalConfirm()}
       >
