@@ -1,0 +1,7 @@
+.profile{
+    color: $text-color;
+    
+    @import './components/card';
+    @import './components/settings';
+    @import './components/footer';
+}

@@ -1,0 +1,23 @@
+.header {
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    font-size: 24px;
+    margin-right: 10px;
+    padding-top: 3px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.34px;
+  }
+}

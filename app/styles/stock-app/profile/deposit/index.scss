@@ -1,0 +1,8 @@
+.deposit{
+    color: $text-color;
+
+    @import './components/header';
+    @import './components/information';
+    @import './components/bank';
+    @import './components/wallet';
+}

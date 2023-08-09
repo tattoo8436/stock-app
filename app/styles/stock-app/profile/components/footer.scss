@@ -1,0 +1,31 @@
+.footer {
+  margin-bottom: 20px;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+
+    &__icon {
+      font-size: 24px;
+      margin-right: 5px;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 25.2px */
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.084px;
+    text-align: center;
+    color: #aeaeae;
+  }
+}

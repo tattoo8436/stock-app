@@ -148,3 +148,25 @@ interface ITransactionDetail {
   price: number;
   investment: number;
 }
+
+interface IProfile {
+  buyingPower: number;
+  saldoRDN: number;
+  saldoPending: number;
+}
+
+interface IDepositItem {
+  id: number;
+  logo: any;
+  name: string;
+}
+
+interface IDeposit {
+  information: {
+    avatar: any;
+    name: string;
+    id: string;
+  };
+  bank: IDepositItem[];
+  wallet: IDepositItem[];
+}

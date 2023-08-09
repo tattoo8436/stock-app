@@ -1,0 +1,45 @@
+.settings {
+  &__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.34px;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    &__item {
+      display: flex;
+      justify-content: space-between;
+
+      &__left {
+        display: flex;
+        align-items: center;
+
+        &__icon {
+          font-size: 24px;
+          margin-right: 16px;
+        }
+
+        &__text {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px; /* 142.857% */
+          letter-spacing: -0.084px;
+        }
+      }
+
+      &__right {
+        font-size: 24px;
+      }
+    }
+
+    .divider{
+        height: 1px;
+        background-color: $divider;
+        margin: 16px 0;
+    }
+  }
+}

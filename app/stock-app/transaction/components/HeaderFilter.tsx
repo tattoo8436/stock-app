@@ -7,6 +7,7 @@ interface IProps {
   filter: string;
   setFilter: React.Dispatch<React.SetStateAction<string>>;
 }
+
 const HeaderFilter = (props: IProps) => {
   const { t, filter, setFilter } = props;
 

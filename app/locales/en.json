@@ -11,7 +11,9 @@
       "cancelOrder": "Cancel Order",
       "amend": "Amend",
       "yesCancel": "Yes, Cancel",
-      "no": "No"
+      "no": "No",
+      "logout": "Log Out",
+      "settings": "Settings"
     },
     "label": {
       "stockvest": "Stockvest",
@@ -43,7 +45,8 @@
       "today": "Today",
       "periode": "Periode",
       "match": "Match",
-      "withDrawal": "Withdrawal"
+      "withDrawal": "Withdrawal",
+      "version": "Version"
     }
   },
   "fieldName": {
@@ -71,7 +74,10 @@
     "payment": "Payment",
     "proceeds": "Proceeds",
     "processAmount": "Process Amount",
-    "orderTime": "Order Time"
+    "orderTime": "Order Time",
+    "buyingPower": "Buying Power",
+    "saldoRDN": "Saldo RDN",
+    "saldoPending": "Saldo Pending"
   },
   "home": {},
   "homeDetail": {
@@ -117,9 +123,28 @@
       "content": "Order successfully cancelled."
     }
   },
+  "profile": {
+    "label": {
+      "deposit": "Deposit",
+      "withdraw": "Withdraw",
+      "accountProfile": "Account Profile",
+      "security": "Security",
+      "faq": "FAQ",
+      "liveSupport": "Live Support"
+    }
+  },
+  "deposit": {
+    "label": {
+      "nomor": "Nomor Rekening RDN Kamu",
+      "salin": "Salin",
+      "bank": "Deposit Menggunakan Transfer Bank",
+      "wallet": "E-Wallet"
+    }
+  },
   "page": {
     "watchlist": "Watchlist",
     "portfolio": "Portfolio",
-    "investmentDetail": "Investment Detail"
+    "investmentDetail": "Investment Detail",
+    "deposit": "Deposit"
   }
 }

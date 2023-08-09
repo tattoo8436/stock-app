@@ -4,7 +4,7 @@
   flex-direction: column;
   position: relative;
 
-  &:has(.stock-app-detail, .portfolio-detail) {
+  &:has(.stock-app-detail, .portfolio-detail, .deposit) {
     .stock-app-footer,
     .stock-app-header {
       display: none;
@@ -26,8 +26,10 @@
     @import "./watchlist/index";
     @import "./portfolio/index";
     @import "./transaction/index";
+    @import "./profile/index";
+    @import "./profile/deposit/index";
   }
 }
 
 @import "./transaction/components/modal-detail";
-@import './transaction/components/modal-cancel';
+@import "./transaction/components/modal-cancel";
