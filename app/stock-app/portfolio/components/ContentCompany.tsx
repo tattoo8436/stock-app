@@ -5,6 +5,7 @@ import {
 } from "@/app/utils";
 import { TFunction } from "i18next";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -30,10 +31,10 @@ const ContentCompany = (props: IProps) => {
       <div className="content-company__content">
         {listCompanies?.map((i) => {
           return (
-            <div
+            <Link
               key={i.id}
+              href={`/stock-app/portfolio/detail/${i.id}`}
               className="content-company__content__item"
-              onClick={() => handleChangePage(i.id)}
             >
               <div className="item__header">
                 <div className="item__header__logo">
@@ -83,7 +84,7 @@ const ContentCompany = (props: IProps) => {
               </div>
 
               <div className="divider"></div>
-            </div>
+            </Link>
           );
         })}
       </div>

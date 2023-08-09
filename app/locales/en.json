@@ -7,7 +7,11 @@
       "delete": "Delete",
       "cancel": "Cancel",
       "confirm": "Confirm",
-      "done": "Done"
+      "done": "Done",
+      "cancelOrder": "Cancel Order",
+      "amend": "Amend",
+      "yesCancel": "Yes, Cancel",
+      "no": "No"
     },
     "label": {
       "stockvest": "Stockvest",
@@ -60,13 +64,14 @@
     "profitLoss": "Profit/Loss",
     "bid": "Bid",
     "ask": "Ask",
-    "buyOrderLot":"Buy Order Lot",
+    "buyOrderLot": "Buy Order Lot",
     "price": "Price",
     "brokerFee": "Broker Fee",
     "exchangeFee": "Exchange Fee",
     "payment": "Payment",
     "proceeds": "Proceeds",
-    "processAmount": "Process Amount"
+    "processAmount": "Process Amount",
+    "orderTime": "Order Time"
   },
   "home": {},
   "homeDetail": {
@@ -100,6 +105,16 @@
     "label": {
       "transactionToday": "Transaction Today",
       "yesterday": "Yesterday"
+    },
+    "modalDetail": {
+      "title": "Order Detail"
+    },
+    "modalCancel": {
+      "content": "Would you like to cancel this order?"
+    },
+    "modalSuccess": {
+      "title": "Successfully!",
+      "content": "Order successfully cancelled."
     }
   },
   "page": {

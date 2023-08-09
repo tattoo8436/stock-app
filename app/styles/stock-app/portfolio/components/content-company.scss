@@ -12,6 +12,9 @@
 
   &__content {
     &__item {
+      text-decoration: none;
+      color: currentColor;
+
       .item {
         &__header {
           display: flex;

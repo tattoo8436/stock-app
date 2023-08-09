@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { FiChevronLeft, FiStar } from "react-icons/fi";
@@ -13,12 +14,12 @@ const Header = () => {
   };
   return (
     <div className="stock-app-detail-header">
-      <div className="stock-app-detail-header__left">
-        <FiChevronLeft 
+      <Link href="/stock-app/home" className="stock-app-detail-header__left">
+        <FiChevronLeft
           className="stock-app-detail-header__left__item"
-          onClick={() => handleBack()}
+          // onClick={() => handleBack()}
         />
-      </div>
+      </Link>
 
       <div className="stock-app-detail-header__right">
         <LuAlarmClock className="stock-app-detail-header__right__item" />

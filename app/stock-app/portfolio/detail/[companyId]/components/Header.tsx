@@ -1,6 +1,7 @@
 "use client";
 
 import { TFunction } from "i18next";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { FiChevronLeft, FiStar } from "react-icons/fi";
@@ -20,12 +21,12 @@ const Header = (props: IProps) => {
   };
   return (
     <div className="portfolio-detail-header">
-      <div className="portfolio-detail-header__icon">
-        <FiChevronLeft
-          className="portfolio-detail-header__icon__item"
-          onClick={() => handleBack()}
-        />
-      </div>
+      <Link
+        href="/stock-app/portfolio"
+        className="portfolio-detail-header__icon"
+      >
+        <FiChevronLeft className="portfolio-detail-header__icon__item" />
+      </Link>
 
       <div className="portfolio-detail-header__text">
         {t("page.investmentDetail")}

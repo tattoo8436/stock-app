@@ -1,0 +1,45 @@
+.modal-cancel {
+  &__image {
+    text-align: center;
+  }
+
+  &__content {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      padding: 16px;
+      background-color: #e0144c;
+      color: #fff;
+      border-radius: 16px;
+      margin-right: 20px;
+    }
+
+    &__right {
+      padding: 16px;
+      background-color: $primary;
+      border-radius: 16px;
+    }
+
+    &__left,
+    &__right {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 150% */
+      letter-spacing: -0.176px;
+      width: 165px;
+      text-align: center;
+    }
+  }
+}

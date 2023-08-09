@@ -1,0 +1,121 @@
+.modal-detail {
+  &__header {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      &__icon {
+        margin-right: 16px;
+      }
+
+      &__text {
+        &__name {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px; /* 142.857% */
+          letter-spacing: -0.084px;
+        }
+
+        &__description {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px; /* 133.333% */
+          color: #8c8f93;
+        }
+      }
+    }
+
+    &__content {
+      border-radius: 10px;
+      background: #f2f4f6;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &__label {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px; /* 133.333% */
+        }
+
+        &__value {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 16px; /* 133.333% */
+        }
+      }
+
+      .open {
+        color: #f76961;
+      }
+
+      .match {
+        color: #50cd89;
+      }
+
+      .withdrawal {
+        color: #e0144c;
+      }
+    }
+
+    .item-investment {
+      & > * {
+        font-size: 14px;
+        font-weight: 600;
+        color: #f76961;
+      }
+    }
+  }
+
+  &__footer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      padding: 16px;
+      background-color: #e0144c;
+      color: #fff;
+      border-radius: 16px;
+      margin-right: 20px;
+    }
+
+    &__right {
+      padding: 16px;
+      background-color: $primary;
+      border-radius: 16px;
+    }
+
+    &__left,
+    &__right {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 150% */
+      letter-spacing: -0.176px;
+      width: 165px;
+      text-align: center;
+    }
+  }
+}

@@ -28,3 +28,6 @@
     @import "./transaction/index";
   }
 }
+
+@import "./transaction/components/modal-detail";
+@import './transaction/components/modal-cancel';

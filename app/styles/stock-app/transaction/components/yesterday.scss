@@ -1,3 +1,88 @@
-.yesterday{
-    
-}
+.yesterday {
+    &__title {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px; /* 140% */
+      letter-spacing: -0.34px;
+      margin-bottom: 20px;
+    }
+  
+    &__content {
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .item {
+          &__left {
+            display: flex;
+            align-items: center;
+            width: 35%;
+  
+            &__icon {
+              margin-right: 16px;
+  
+              img {
+                width: 32px;
+                height: 32px;
+              }
+            }
+  
+            &__text {
+              &__name {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 16px; /* 133.333% */
+              }
+  
+              &__value {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px; /* 133.333% */
+              }
+            }
+          }
+  
+          &__center {
+            text-align: center;
+            width: 35%;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px; /* 133.333% */
+          }
+  
+          &__right {
+            width: 30%;
+            text-align: end;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px; /* 133.333% */
+          }
+        }
+        
+        .open {
+          color: #f76961;
+        }
+  
+        .match {
+          color: #50cd89;
+        }
+  
+        .withdrawal {
+          color: #e0144c;
+        }
+      }
+  
+      .divider {
+        height: 1px;
+        background-color: $divider;
+        margin: 16px 0;
+      }
+    }
+  }
+  

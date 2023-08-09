@@ -12,6 +12,7 @@ import {
   getColorValue,
 } from "@utils/index";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface IProps {
   t: any;
@@ -75,10 +76,11 @@ const HomeCompany = (props: IProps) => {
       <div className="home-company__content">
         {listCompanies?.map((i) => {
           return (
-            <div
+            <Link
               key={i.id}
+              href={`/stock-app/home/detail/${i.id}`}
               className="home-company__content__item"
-              onClick={() => handleChangePage(i.id)}
+              //onClick={() => handleChangePage(i.id)}
             >
               <div className="item__left">
                 <div className="item__left__logo">
@@ -103,7 +105,7 @@ const HomeCompany = (props: IProps) => {
                   {formatValuePercent(i.value2, i.percent)}
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

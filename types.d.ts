@@ -132,7 +132,19 @@ interface ICompanyTransaction {
   status: string;
 }
 
-interface ITransaction{
-  transactionToday: ICompanyTransaction[],
-  yesterday: ICompanyTransaction[]
+interface ITransaction {
+  transactionToday: ICompanyTransaction[];
+  yesterday: ICompanyTransaction[];
+}
+
+interface ITransactionDetail {
+  id: number;
+  logo: any;
+  name: string;
+  description: string;
+  orderTime: string;
+  status: string;
+  lot: number;
+  price: number;
+  investment: number;
 }

@@ -9,21 +9,21 @@
   z-index: 2;
   background-color: #fff;
 
-  &__item{
+  &__item {
     border-radius: 10px;
     height: 28px;
     width: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: currentColor;
   }
 
-  .active{
+  .active {
     background-color: $text-color;
 
-    svg{
-        color: $primary;
+    svg {
+      color: $primary;
     }
   }
-
 }
